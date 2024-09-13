@@ -1,0 +1,30 @@
+/** Step one **/
+/** Step two **/
+h1,h2,h3,h4,h5,h6{
+    font-family: "Sofadi One", sans-serif;
+}
+/** Step three **/
+body{
+    display: flex;
+    flex-direction: column;
+    background-color: #f8f8f8;
+}
+h1{
+    font-size: 46px;
+    letter-spacing: 1.75px;
+    color: #f9a825;
+    text-align: center;
+}
+/** Step four **/
+a,p,li{
+    font-family: "Inria Sans", sans-serif;
+}
+/** Step five **/
+p span{
+    color: #0cb19d;
+}
+/** Step six **/
+h3{
+    font-size: 7em;
+    text-shadow: 4px 2px 4px rgba(0,0,0,.7);
+}
