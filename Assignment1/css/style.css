@@ -1,0 +1,51 @@
+html{
+    scroll-behavior: smooth;
+}
+
+/** Custom font faces**/
+
+@font-face {
+    font-family: "twister";
+    src: url("../fonts/Twister.ttf");
+    font-weight: auto;
+}
+@font-face {
+    font-family: "riverAdventure";
+    src: url("../fonts/RiverAdventure.ttf");
+    font-weight: auto;
+}
+/**  Main heading **/
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url("../img/stormy background.jpg");
+    background-size: cover;
+    height: 100vh;
+    width: auto;
+}
+body section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 5px;
+}
+body section:first-child{
+}
+h1{
+    font-family: "twister",sans-serif;
+    font-size: 4em;
+    color: #ff9800;
+}
+h2{
+    font-family: "riverAdventure", sans-serif;
+    font-size: 3em;
+    color:rgba(0,255,0,1);
+}
+h3,h4,h5,h6{
+    font-size: 2em;
+    text-decoration: underline;
+    margin-bottom: 5px;
+}
