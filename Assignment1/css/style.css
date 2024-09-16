@@ -6,25 +6,58 @@ html{
 
 @font-face {
     font-family: "twister";
-    src: url("../fonts/Twister.ttf");
+    src: url("../fonts/Twister.ttf") format("truetype");
     font-weight: auto;
 }
 @font-face {
     font-family: "riverAdventure";
-    src: url("../fonts/RiverAdventure.ttf");
+    src: url("../fonts/RiverAdventure.ttf") format("truetype");
     font-weight: auto;
 }
-/**  Main heading **/
+@font-face{
+    font-family: "stormGusta";
+    src: url("../fonts/StormGusta.ttf") format("truetype");
+    font-weight: auto;
+}
 
-body{
+@font-face{
+    font-family: "alpenJack";
+    src: url("../fonts/AlpenJack.ttf") format("truetype");
+    font-weight: auto;
+}
+/**  Main styling **/
+header{
+    display: flex;
+    height: 150px;
+    align-items: center;
+    padding: 0 10px;
+}
+header section {
+    width: auto;
+    height: 130px;
+    justify-self: left;
+    flex-grow: 1;
+}
+header section img{
+    width:auto;
+    height: 100%;
+}
+header section a{
+    font-family: "stormGusta", sans-serif;
+    text-decoration: underline;
+    font-size: 2em;
+}
+body {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-image: url("../img/stormy background.jpg");
+    background-image: url("../img/tornado-green-nikolas-noonan-unsplash-scaled-e1678381781450.jpg");
     background-size: cover;
-    height: 100vh;
-    width: auto;
+    background-repeat: no-repeat;
+    height: auto;
+    width: 100vh;
+    padding-top: 20px;
 }
 body section{
     display: flex;
@@ -36,16 +69,43 @@ body section:first-child{
 }
 h1{
     font-family: "twister",sans-serif;
-    font-size: 4em;
-    color: #ff9800;
+    font-size: 6em;
+    color: #b23636;
+    text-shadow: 3px 2px 3px rgba(0,0,0,.7);
+    margin-bottom: 20px;
 }
 h2{
     font-family: "riverAdventure", sans-serif;
-    font-size: 3em;
-    color:rgba(0,255,0,1);
+    font-size: 2.5em;
+    color:#b23636;
+    text-shadow: 4px 2px 4px rgba(0,0,0,.7);
+    margin-bottom: 30px;
 }
 h3,h4,h5,h6{
+    font-family: "alpenJack", sans-serif;
     font-size: 2em;
     text-decoration: underline;
-    margin-bottom: 5px;
+    color: #af3520;
+    text-shadow: 4px 2px 4px rgba(0,0,0,.7);
+    margin: 10px 0px;
 }
+/** Default font styles**/
+.First-Verse p,.Second-Verse p, .Chorus p{
+    font-family: "riverAdventure", sans-serif;
+    font-size: 1.2em;
+    color: #e7ad36;
+    text-shadow: 4px 2px 6px rgba(0,0,0,.7);
+}
+.First-Verse, .Second-Verse, .Chorus{
+    margin: 25px 0px;
+    line-height: 1.5;
+}
+/** Color styling the marks **/
+p mark{
+    background-color: rgba(0,0,0,0);
+    color: #1561d6;
+    font-family: "stormGusta", sans-serif;
+    font-size: 1.5em;
+}
+
+
