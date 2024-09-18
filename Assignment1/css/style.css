@@ -26,6 +26,7 @@ html{
     font-weight: auto;
 }
 /**  Main styling **/
+    /**  Header    **/
 header{
     display: flex;
     height: 150px;
@@ -47,12 +48,14 @@ header section a{
     text-decoration: underline;
     font-size: 2em;
 }
+/**  Body  **/
 body {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-image: url("../img/tornado-green-nikolas-noonan-unsplash-scaled-e1678381781450.jpg");
+    /*It took me about 8 difference photos to get this that worked with the colors I chose*/
+    background-image: url("../img/istockphoto-1373773499-612x612.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     height: auto;
@@ -67,6 +70,8 @@ body section{
 }
 body section:first-child{
 }
+
+/** Headers **/
 h1{
     font-family: "twister",sans-serif;
     font-size: 6em;
@@ -81,6 +86,10 @@ h2{
     text-shadow: 4px 2px 4px rgba(0,0,0,.7);
     margin-bottom: 30px;
 }
+
+/** I never end up using the h3-h6 in the final draft
+Breaking the lyrics up with sub headings didnt look right
+and kinda made the page blocky**/
 h3,h4,h5,h6{
     font-family: "alpenJack", sans-serif;
     font-size: 2em;
@@ -106,6 +115,21 @@ p mark{
     color: #1561d6;
     font-family: "stormGusta", sans-serif;
     font-size: 1.5em;
+    letter-spacing: 2px;
 }
 
-
+/**   Footer section **/
+footer section p{
+    font-family: "stormGusta", sans-serif;
+    font-size: 2em;
+    color: #1561d6;
+    text-shadow: 4px 2px 4px rgba(0,0,0,.7);
+    text-decoration: none;
+    letter-spacing: 2px;
+}
+footer section a{
+    font-family: "twister", sans-serif;
+    font-size: 1.5em;
+    color: #e7ad36;
+    text-shadow: 3px 2px 3px rgba(0,0,0,.7);
+}
