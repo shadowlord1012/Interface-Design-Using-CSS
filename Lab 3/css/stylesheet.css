@@ -1,0 +1,59 @@
+body{
+    display: flex;
+    justify-content: left;
+    overflow: hidden;
+}
+
+main div{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    align-items: center;
+}
+main div img{
+    width: 80%;
+    height: auto;
+    z-index: 2;
+}
+#Bullet{
+    position: absolute;
+    width: 75px;
+    height: auto;
+    transform: translateY(-39px) translateX(-225px);
+    transition: all .25s linear;
+    z-index: 1;
+}
+.SVG_Button{
+    position: relative;
+    width: 200px;
+    height: 60px;
+    transform: translateY(25px);
+    color: #0e0e0e;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    line-height: 60px;
+    transition: 0.3s;
+}
+.SVG_Button svg, .SVG_Button svg rect{
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    fill: transparent;
+    transition: .75s;
+}
+.SVG_Button svg rect{
+    stroke: #0cb19d;
+    stroke-width: 4px;
+    stroke-dasharray: 520;
+    stroke-dashoffset: 520;
+}
+.SVG_Button:hover{
+    background: #e63946;
+    transition-delay: .75s;
+    color: #f6f6f6;
+}
+.SVG_Button:hover svg rect{
+    stroke-dashoffset: 0;
+}
