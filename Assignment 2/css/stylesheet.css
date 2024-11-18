@@ -1,0 +1,180 @@
+
+/** Custom Font Faces**/
+
+@font-face {
+    font-family: 'SuperShiny';
+    src: url('../Custom Fonts/SuperShiny-0v0rG.ttf');
+    font-weight: auto;
+}
+
+@font-face {
+    font-family: 'EngineBrake';
+    src: url('../Custom Fonts/Enginebrakedemo-E41Yz.ttf');
+    font-weight: auto;
+}
+/** default styling of page **/
+mark{
+    background-color: #f8f8f8;
+}
+body{
+    display: grid;
+    background-color: #f6f6f6;
+}
+/** Header styling**/
+
+header{
+    display: flex;
+    align-items: center;
+    position: fixed;
+    height: 150px;
+    width: 100%;
+    background-color: #f6f6f6;
+    z-index: 9999;
+    transition: all .25s linear;
+}
+
+header div, header nav{
+    height: 100px;
+    width: auto;
+}
+
+header div:first-child img{
+    height: 100%;
+    width: auto;
+}
+
+header div:nth-child(2){
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    align-content: center;
+    text-align: center;
+}
+
+header div:nth-child(2) img{
+    height: 50px;
+    width: auto;
+}
+
+header div:nth-child(2) img:first-child {
+    height: 75px;
+    width: auto;
+    transform: translateY(-15px) translateX(25px);
+}
+
+/** The pac dots**/
+#pacdot_one,#pacdot_two,#pacdot_three,#pacdot_four{
+    transform: translateX(50px);
+    padding: 0px 50px;
+}
+/** Menu styling **/
+header nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    text-decoration: none;
+}
+header nav menu li{
+    list-style: none;
+    padding: 10px 0;
+    font-family: "EngineBrake", sans-serif;
+}
+
+header nav menu img{
+    height: 35px;
+    width: auto;
+    transform: translateY(25px) translateX(-250px);
+}
+
+/** Main page styling **/
+main div:first-child{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 50px;
+    background-image: url('../img/1490373477-delish-jolly-rancher-shots-2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+main div:first-child section{
+    background-color: rgba(0,0,0,0.4);
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+main div h1{
+    font-size: 6em;
+    text-align: center;
+    text-decoration: none;
+    color: #6e9de5;
+    text-shadow: 4px 3px 2px rgba(0,0,0,.7);
+
+}
+/** Styling the bags **/
+.Original_Bag_Class, .Sour_Bag_Class {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    width: auto;
+    height: 700px;
+    padding-left: 50px;
+    padding-right: 15px;
+    justify-content: center;
+    align-items: center;
+    transition: transform 1s ease-in-out;
+}
+.Original_Bag_Class img,.Sour_Bag_Class img{
+    height: 500px;
+    width: auto;
+}
+
+.Original_Bag_Class p, .Sour_Bag_Class p{
+    font-family: 'SuperShiny', cursive;
+    padding: 10px 5px;
+    font-size: 2.5em;
+}
+
+/** Styling all the marks**/
+#blue_raspberry, #blue_raspberry_sour{
+    color: #0b59cf;
+}
+#red_cherry, #red_cherry_sour{
+    color: #741c34;
+}
+#green_apple, #green_apple_sour{
+    color: #acea39;
+}
+#watermelon, #watermelon_sour{
+    color: #436503;
+}
+#strawberry, #strawberry_sour{
+    color: #cb2c2c;
+}
+#lemon, #lemon_sour{
+    color: #d6ce26;
+}
+
+/** Original Bag styling **/
+
+.Original_Bag_Class img:hover, .Sour_Bag_Class img:hover {
+    transform: scale(1.5);
+    cursor: pointer;
+}
+/** Disables the second bag until the bottom image is clicked**/
+.Sour_Bag_Class{
+    display: none;
+}
+/** Jolly rancher button styling **/
+.Jolly_button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Jolly_button p{
+    font-family: "EngineBrake", sans-serif;
+    z-index: 20;
+    transform: translateX(150px);
+}
