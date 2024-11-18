@@ -26,7 +26,7 @@ header{
     display: flex;
     align-items: center;
     position: fixed;
-    height: 150px;
+    height: 175px;
     width: 100%;
     background-color: #f6f6f6;
     z-index: 9999;
@@ -34,7 +34,7 @@ header{
 }
 
 header div, header nav{
-    height: 100px;
+    height: 58%;
     width: auto;
 }
 
@@ -71,24 +71,28 @@ header nav{
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100px;
     flex-grow: 1;
     text-decoration: none;
 }
+header nav menu{
+    transform: translateY(-28px);
+}
 header nav menu li{
     list-style: none;
-    padding: 10px 0;
     font-family: "EngineBrake", sans-serif;
 }
 
 header nav menu img{
     height: 35px;
     width: auto;
-    transform: translateY(25px) translateX(-250px);
+    transform: translateY(28px) translateX(-117px);
 }
 
 /** Main page styling **/
 main div:first-child{
     height: 100vh;
+    width: auto;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -171,10 +175,91 @@ main div h1{
     display: flex;
     justify-content: center;
     align-items: center;
+    transform: translateY(-108px);
 }
 
 .Jolly_button p{
     font-family: "EngineBrake", sans-serif;
     z-index: 20;
     transform: translateX(150px);
+}
+
+/** Responsive design**/
+
+@media screen and (max-width: 1270px){
+    /**Change the spacing of the dots**/
+    #pacdot_one,#pacdot_two,#pacdot_three,#pacdot_four{
+        transform: translateX(50px);
+        padding: 0px 15px;
+    }
+}
+
+@media screen and (max-width: 1024px){
+    header
+    {
+        height: 75px;
+    }
+    header div:nth-child(2) img:first-child{
+        height: 40px;
+        width: auto;
+        transform: translateX(30px);
+    }
+    #pacdot_one,#pacdot_two,#pacdot_three,#pacdot_four{
+        height: 25px;
+        width: auto;
+        transform: translateY(10px) translateX(25px);
+    }
+    #hard_candy_one,#hard_candy_two,#hard_candy_three{
+        display: none;
+    }
+    header nav menu{
+        display: inline-flex;
+        padding-top: 50px;
+    }
+    header nav menu li{
+        padding: 0 10px;
+    }
+    main div:first-child{
+        background-size: contain;
+        height: 58vh;
+        width: auto;
+        padding-top: 78px;
+    }
+    main div:first-child section{
+        height: 100%;
+        width: auto;
+    }
+    main div:first-child section h1{
+        font-size: 3.5em;
+    }
+    .Sour_Bag_Class img,.Original_Bag_Class img{
+        height: 350px;
+        transform: translateX(25px);
+    }
+    .Sour_Bag_Class p, .Original_Bag_Class p{
+        font-size: 1.85em;
+    }
+    .Jolly_button img{
+        height: 175px;
+    }
+    .Jolly_button p{
+        transform: translateX(133px);
+    }
+
+}
+
+@media screen and (max-width: 768px)
+{
+    main div:first-child {
+        height: 355px;
+    }
+    .Sour_Bag_Class,.Original_Bag_Class{
+        height: 500px;
+        padding-left: 10px;
+        padding-right: 20px;
+    }
+    .Original_Bag_Class img:hover, .Sour_Bag_Class img:hover {
+        transform: scale(1.2);
+        cursor: pointer;
+    }
 }
