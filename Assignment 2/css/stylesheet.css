@@ -12,13 +12,16 @@
     src: url('../Custom Fonts/Enginebrakedemo-E41Yz.ttf');
     font-weight: auto;
 }
+h1{
+    font-family: "SuperShiny", sans-serif;
+}
 /** default styling of page **/
 mark{
-    background-color: #f8f8f8;
+    background-color: #5fea9a;
 }
 body{
     display: grid;
-    background-color: #f6f6f6;
+    background-color: #5fea9a;
 }
 /** Header styling**/
 
@@ -221,13 +224,13 @@ main div h1{
     }
     main div:first-child{
         background-size: contain;
-        height: 58vh;
+        height: 66vh;
         width: auto;
         padding-top: 78px;
     }
     main div:first-child section{
         height: 100%;
-        width: auto;
+        width: 100%;
     }
     main div:first-child section h1{
         font-size: 3.5em;
@@ -261,5 +264,33 @@ main div h1{
     .Original_Bag_Class img:hover, .Sour_Bag_Class img:hover {
         transform: scale(1.2);
         cursor: pointer;
+    }
+}
+
+@media screen and (max-width: 430px){
+    header div:nth-child(2){
+        display: none;
+    }
+    header nav menu li{
+        padding: 0px 4px;
+    }
+    main div:first-child{
+        height: 162px;
+    }
+    main div:first-child section h1{
+        font-size: 2em;
+    }
+    .Original_Bag_Class,.Sour_Bag_Class{
+        grid-template-columns: 100%;
+    }
+    .Original_Bag_Class img:hover, .Sour_Bag_Class img:hover {
+         transform: scale(1.2);
+         cursor: pointer;
+     }
+    .Original_Bag_Class p, .Sour_Bag_Class p{
+        font-size: 1em;
+    }
+    .Jolly_button{
+        transform: translateX(-55px);
     }
 }
