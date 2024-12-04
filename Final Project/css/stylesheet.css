@@ -3,7 +3,11 @@
     src: url('../Custom Fonts/Disarmer-pvVD.ttf');
     font-weight: auto;
 }
-
+@font-face {
+    font-family: 'DomesticPrisonItalic';
+    src: url('../Custom Fonts/DomesticPrisonItalic-9M9DK.ttf');
+    font-weight: auto;
+}
 body {
     display: grid;
     grid-template-columns: repeat(4,25%);
@@ -25,6 +29,7 @@ header{
     height: 125px;
     background-color: #f8f8f8;
     align-items: center;
+    z-index: 9999;
 }
 header div{
     width: 100%;
@@ -45,8 +50,13 @@ header menu li{
     padding: 0 10px;
 }
 header menu li a{
+    font-size: 1.5em;
     color: #0e0e0e;
 }
+a:hover{
+    cursor: url("../customFiles/36753.png"), crosshair;
+}
+/* Main Index page styling*/
 .main_content, .jagdtiger_content, .stridsvagn_content, .tiger_content{
     grid-area: main;
 }
@@ -54,37 +64,25 @@ header menu li a{
 .main_header{
     grid-area: masthead;
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: 100%;
     grid-template-rows: auto;
     align-items: center;
     width: 100%;
     height: 400px;
     padding-top: 150px;
-    color: #f6f6f6;
     /*Add in video background from youtube of the tank moving*/
 }
 .main_header h1{
-    color: #0e0e0e;
+    color: #fffffb;
     font-size: 5em;
+    font-family: 'Disarmer', sans-serif;
     text-decoration: none;
     text-align: center;
-    letter-spacing: 5px;
+    letter-spacing: 9px;
     width: auto;
     height: 125px;
+    -webkit-text-stroke: 5px #0e0e0e;
 }
-#TankImageOne{
-    width: auto;
-    height: 200px;
-}
-#TankImageTwo{
-    width: auto;
-    height: 150px;
-}
-/*Needed for key frames to animate a moving bullet*/
-#ShellOne,#ShellTwo{
-    display: none;
-}
-
 /*Disables the information on the screen will do a hover to show after*/
 #Tiger_1_Information, #Stridsvagn_information,
 #Jagdtiger_information{
@@ -95,7 +93,6 @@ main section:nth-child(2){
     grid-template-columns: repeat(3,1fr);
     align-items: center;
     align-content: center;
-    background-color: #f9a825;
     height: 200px;
     width: auto;
 }
@@ -105,7 +102,9 @@ main section:nth-child(2) h4{
     font-family: 'Disarmer',sans-serif;
     padding: 0px 10px;
     text-align: center;
-    color: #0cb19d;
+    color: #fffffb;
+    -webkit-text-stroke: 3px #0e0e0e;
+
 }
 /*Setting up the card spots for the tanks*/
 main section:nth-child(3){
@@ -116,7 +115,6 @@ main section:nth-child(3){
     align-items: center;
     height: 300px;
     width: auto;
-    background-color: #f9a825;
 }
 main section:nth-child(3) div{
     display: flex;
@@ -131,11 +129,12 @@ main section:nth-child(3) div:nth-child(2) img,
 main section:nth-child(3) div:nth-child(3) img {
     height: 250px;
     width: auto;
+    border: 10px solid #f9a825;
 }
 main section:nth-child(4){
     height: 25px;
     width: auto;
-    background-color: #f9a825;
+    z-index: 60;
 }
 main section:nth-child(4) div{
     display: grid;
@@ -167,13 +166,207 @@ main section:nth-child(4) div a:nth-child(3){
     left: 74px;
     top: -57px;
 }
+#backgroundVideo{
+    position: fixed;
+    top: 75px;
+    right: 0px;
+    bottom: 0px;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+}
 main section:nth-child(5){
     display: grid;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(3,1fr);
     grid-template-rows: none;
+    align-content: center;
     height: 300px;
+    width: auto;
+    padding-bottom: 25px;
+}
+main section:nth-child(5) div {
+    height: 100%;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 50px;
+}
+main section:nth-child(5) div img{
+    height: 250px;
+    width: auto;
+    z-index: 3;
+    border: 5px solid #f9a825;
+}
+main section:nth-child(5) div:first-child img:hover{
+    transform: rotate(22deg);
+    transition: all .5s ease-in-out;
+}
+main section:nth-child(5) div:nth-child(2) img:hover{
+    transform: scaleX(1.2);
+    transition: all .5s ease-in-out;
+}
+main section:nth-child(5) div:nth-child(3) img:hover{
+    transform: rotate(-22deg);
+    transition: all .5s ease-in-out;
+}
+/* Tiger h1, stridsvagn and jagdtiger page*/
+.tiger_content, .stridsvagn_content, .jagdtiger_content{
+    display: grid;
+    grid-area: main;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    align-items: center;
+    justify-content: center;
+}
+.tiger_content section:first-child,.stridsvagn_content section:first-child,
+.jagdtiger_content section:first-child{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: center;
+    padding-top: 175px;
+    height: 600px;
+    width: auto;
+}
+.tiger_content section:first-child h3, .stridsvagn_content section:first-child h3,
+.jagdtiger_content section:first-child h3{
+    font-family: 'Disarmer',sans-serif;
+    font-size: 3em;
+}
+.tiger_content section:first-child div, .stridsvagn_content section:first-child div,
+.jagdtiger_content section:first-child div{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    height: 100%;
+    width: 100%;
+}
+.tiger_content section:first-child div img{
+    height: 500px;
+    width: auto;
+    padding: 10px 200px;
+}
+.stridsvagn_content section:first-child div img{
+    height: 500px;
+    width: auto;
+    padding: 10px 350px;
+}
+.jagdtiger_content section:first-child div img{
+    height: 500px;
+    width: auto;
+    padding: 10px 350px;
+}
+.tiger_content section:first-child div p, .stridsvagn_content section:first-child div p,
+.jagdtiger_content section:first-child div p{
+    display: none;
+}
+.tiger_content section:nth-child(2), .stridsvagn_content section:nth-child(2),
+.jagdtiger_content section:nth-child(2){
+    display: grid;
+    position: relative;
+    grid-template-columns: 100%;
+    align-items: center;
+    text-align: center;
+    height: 200px;
+    width: auto;
+    background-color: #0e0e0e;
+}
+.tiger_content section:nth-child(2) div, .stridsvagn_content section:nth-child(2) div,
+.jagdtiger_content section:nth-child(2) div{
+    height: 175px;
+    width: auto;
+    align-content: center;
+    background-color: #0e0e0e;
+}
+.tiger_content section:nth-child(2) div p, .stridsvagn_content section:nth-child(2) div p,
+.jagdtiger_content section:nth-child(2) div p{
+    font-family: 'DomesticPrisonItalic',sans-serif;
+    font-size: 2em;
+    color: #fffffb;
+}
+/*About me page*/
+#About_Me_Page{
+    display: grid;
+    grid-area: main;
+    grid-template-columns: 50% 50%;
+    align-content: center;
+    height: 100vh;
+    width: auto;
+}
+#About_Me_Page section:first-child{
+    display:grid;
+    grid-template-columns: 100%;
+    height: 700px;
+    align-content: center;
+    text-align: center;
+    background-color: #0e0e0e;
+}
+#About_Me_Page section:first-child h2{
+    font-family: 'DomesticPrisonItalic',sans-serif;
+    font-size: 4em;
+    padding: 25px 0px;
+    color: #f9a825;
+}
+#About_Me_Page section:first-child p{
+    font-family: 'DomesticPrisonItalic',sans-serif;
+    font-size: 2em;
+    color: #f9a825;
+}
+#About_Me_Page section:nth-child(2){
+    align-content: center;
+    height: 700px;
+    width: auto;
+    background-color: #fffffb;
+}
+#About_Me_Page section:nth-child(2) img{
+    align-self: center;
+    height: 98%;
     width: auto;
 }
 footer{
     grid-area: footer;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    position: relative;
+    height: 300px;
+    width: auto;
+    align-items: center;
+    text-align: center;
+    background-color: #fffffb;
+}
+footer section:first-child{
+    padding: 10px 0px;
+}
+footer section:first-child img{
+    height: 200px;
+    width: auto;
+}
+footer section:nth-child(2) div{
+    padding: 5px 0px;
+}
+footer section:nth-child(2) div form h6{
+    font-family: 'DomesticPrisonItalic',sans-serif;
+    font-size: 2em;
+    color: #0e0e0e;
+}
+footer section:nth-child(2) div form div label{
+    font-family: 'DomesticPrisonItalic',sans-serif;
+    font-size: 1.5em;
+    padding: 5px 5px;
+}
+footer section:nth-child(2) div form input[type=submit]{
+    transform: translate(162px, -113px);
+    height: 25px;
+    width: 100px;
+}
+footer section:nth-child(2) div form input[type=submit]:hover,
+input[type=text]:hover, input[type=email]:hover{
+    outline: none;
+    border: 3px solid #00d084;
+}
+input[type=text]:focus, input[type=email]:focus{
+    border: 3px solid #cf2e2e;
+    outline: none;
 }
