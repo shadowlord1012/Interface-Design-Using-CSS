@@ -1,0 +1,133 @@
+header {
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 125px;
+    width: 100%;
+    background-color: #1d3557;
+}
+header menu{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    align-content: center;
+    align-items: center;
+    height: 100%;
+    width:auto;
+}
+header menu li{
+    list-style: none;
+    height: 100%;
+    width: auto;
+    padding: 0px 60px;
+    border-right : solid 2px #fffffb;
+}
+header menu li:last-child {
+    border-right: none;
+}
+
+header menu li a, header menu li p{
+    text-decoration: none;
+    font-size: 2em;
+    color: #fffffb;
+}
+header div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header div img{
+    height: 190px;
+    width: auto
+}
+main{
+    height: 100vh;
+    width: auto;
+}
+.hero{
+    background-image: url("../img/4.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+#mask{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0,0,0,0.6);
+}
+.hero div h1{
+    font-size: 6em;
+    color: #fffffb;
+}
+ .arrow{
+     position: absolute;
+     left: 50%;
+     top: 85%;
+     border-top: none;
+     border-left: none;
+     border-bottom: 5px solid #fffffb;
+     border-right: 5px solid #fffffb;
+     height: 30px;
+     width: 30px;
+     margin: -20px 0 0 -20px;
+     transform: rotate(45deg);
+ }
+
+ .arrow:hover{
+     transform: scale(1.5) rotate(45deg);
+ }
+
+ #title {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     height: 50vh;
+     width: 100%;
+     background-color: #1d3557;
+ }
+ #title h2{
+     color: #fffffb;
+     font-size: 4em;
+     padding: 20px 0;
+ }
+ #title p{
+     color: #fffffb;
+     font-size: 1.3em;
+     padding: 20px 20px;
+ }
+
+ #image1and2{
+     display: flex;
+     flex-direction: row;
+     justify-content: center;
+     align-items: center;
+     height: 100vh;
+     width: auto;
+     background-color: #1d3557;
+ }
+ #image1and2 img{
+     height: 100%;
+     width: auto;
+ }
+ #image1and2 img:first-child{
+     clip-path: polygon(0 0, 100% 12%, 100% 100%, 0% 100%);
+ }
+ #image1and2 img:nth-child(2){
+     clip-path: polygon(0 12%, 100% 0%, 100% 100%, 0% 100%);
+ }
+
+ #video{
+     height: 100%;
+     width: auto;
+ }
+ #video video{
+     height: 100%;
+     width: 100%;
+ }
